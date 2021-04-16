@@ -7,13 +7,17 @@ const GET_URL = gql`
 	}
 `;
 
-type fetchResult = Result | [];
+type fetchResult = (i: String) => Result;
 
-const useFetchShortener = (inputUrl: string): fetchResult => {
+function useQueryFn(inputUrl: String) {
 	const { data, loading, error } = useQuery(GET_URL, {
 		variables: { url: inputUrl },
 	});
 	return { data, loading, error };
+}
+
+const useFetchShortener = (): fetchResult => {
+	return useQueryFn;
 };
 
-export default useFetchShortener;
+export default useFetchShortener();

@@ -3,16 +3,12 @@ import '../assets/Main.css';
 import useInput from '../hooks/useInputUrl';
 import Button from './Button';
 import Fetch from '../hooks/useFetchShortener';
+import Results from '../components/Results'
 
 const Main = () => {
 	//input text field states
 	const { value: inputValue, handleChange } = useInput();
 	const [requestedURL, setrequestedURL] = React.useState(inputValue);
-	const results = React.useMemo(() => {
-		if (requestedURL.length === 0) return null;
-
-		return Fetch(requestedURL);
-	}, [requestedURL]);
 
 	//handles sending request to the Graphql API
 	const sendRequest = React.useCallback(() => {
@@ -30,6 +26,7 @@ const Main = () => {
 			<Button disabled={inputValue.length === 0} sendRequest={sendRequest}>
 				Generate
 			</Button>
+			{requestedURL.length !== 0 && <Results requestedUrl={requestedURL}></Results>}  
 		</div>
 	);
 };

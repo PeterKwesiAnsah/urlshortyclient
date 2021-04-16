@@ -15,10 +15,16 @@ const Button = ({ children, disabled = false, sendRequest }: buttonProps) => {
 
 	return (
 		<div className="button__box">
-			<button style={buttonStyle} disabled={disabled} className="button">
+			<button
+				style={buttonStyle}
+				disabled={disabled}
+				className="button"
+				onClick={sendRequest}
+			>
 				{children}
 			</button>
 		</div>
+        
 	);
 };
 
