@@ -12,7 +12,7 @@ type queryResultProviderProp = {
 const context = React.createContext<null | Result>(null);
 
 const QueryResultProvider = ({ children, result }: queryResultProviderProp) => {
-	return <div></div>;
+	return <context.Provider value={result}>{children}</context.Provider>;
 };
 
 export default QueryResultProvider;
