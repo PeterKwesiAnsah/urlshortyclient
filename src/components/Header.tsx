@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../assets/Header.css'
 
 type HeaderProp = {
