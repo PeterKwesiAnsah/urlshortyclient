@@ -7,7 +7,6 @@
     font-size: 16px;
     border-radius: 4px;
     font-weight: bolder;
-    cursor: pointer;
 }
 .button:focus{
     outline: none;

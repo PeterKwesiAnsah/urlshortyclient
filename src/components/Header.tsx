@@ -1,5 +1,4 @@
-
-import '../assets/Header.css'
+import '../assets/Header.css';
 
 type HeaderProp = {
 	children: string;
