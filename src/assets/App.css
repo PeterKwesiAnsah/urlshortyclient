@@ -1,6 +1,7 @@
 :root {
 	--backgroundColor: #000;
 	--textColor: #fff;
+	--buttonColorMain:#3F51B5
 }
 
 * {
@@ -16,6 +17,7 @@ body {
 	font-family: 'Noto Sans', sans-serif;
 	background-color: var(--backgroundColor);
 	color: var(--textColor);
+	
 }
 
 #root {
