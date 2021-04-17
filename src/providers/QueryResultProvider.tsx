@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type Result = {
-	[k in 'data' | 'loading' | 'error']: Omit<any, string | number> | undefined;
+	[k in 'data' | 'loading' | 'error']: any;
 };
 
 type queryResultProviderProp = {

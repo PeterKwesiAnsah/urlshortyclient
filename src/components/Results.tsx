@@ -1,6 +1,7 @@
 import React from 'react';
 import useQuery from '../hooks/useFetchShortener';
 import Loading from '../components/Loader';
+import TakeAction from '../components/TakeActions'
 
 type resultsProp = {
 	requestedUrl: string;
@@ -11,12 +12,12 @@ const Results = ({ requestedUrl }: resultsProp): JSX.Element => {
 
 	console.log(data);
 
-	if (true) {
+	if (loading) {
 		return <Loading></Loading>;
 	}
 
-	if (data) {
-		return <h1>{}</h1>;
+	if (data && !loading){
+		return <TakeAction url={data.shortenURL}></TakeAction>
 	}
 
 	//if theres and error
