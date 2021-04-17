@@ -1,13 +1,18 @@
-import React, { CSSProperties, Dispatch } from 'react';
+import React, {
+	CSSProperties,
+	Dispatch,
+	ReactElement,
+	ReactPropTypes,
+} from 'react';
 import '../assets/Button.css';
 
 type buttonProps = {
-	disabled?: boolean;
 	children: string;
 	sendRequest: () => void;
+	disabled: boolean;
 };
 
-const Button = ({ children, disabled = false, sendRequest }: buttonProps) => {
+const Button = ({ children, disabled, sendRequest }: buttonProps) => {
 	const buttonStyle: CSSProperties = {
 		backgroundColor: disabled ? 'buttonface' : 'var(--buttonColorMain)',
 		cursor: disabled ? 'not-allowed' : 'pointer',
@@ -24,7 +29,6 @@ const Button = ({ children, disabled = false, sendRequest }: buttonProps) => {
 				{children}
 			</button>
 		</div>
-        
 	);
 };
 

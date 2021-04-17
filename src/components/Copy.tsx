@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import '../assets/Button.css';
+import SnackBar from './SnackBar';
 
-const Copy = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+type copyProps = {
+	url: string;
+};
 
-export default Copy
+const Copy = ({ url }: copyProps) => {
+	const [copy, setCopy] = React.useState(false);
+	return (
+		<div>
+			<CopyToClipboard text={url} onCopy={() => setCopy(true)}>
+				<span className="button">Copy</span>
+			</CopyToClipboard>
+		</div>
+	);
+};
+
+export default Copy;
