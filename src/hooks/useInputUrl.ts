@@ -1,8 +1,9 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, Dispatch } from 'react';
 
 type hookReturn = {
 	value: string;
 	handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
+	setValue:Dispatch<string>;
 };
 
 const useInput = (): hookReturn => {
@@ -11,7 +12,7 @@ const useInput = (): hookReturn => {
 		setValue(event.target.value);
 	};
 
-	return { value, handleChange };
+	return { value, handleChange,setValue };
 };
 
 export default useInput;
