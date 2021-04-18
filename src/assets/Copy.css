@@ -1,0 +1,17 @@
+.copy__button {
+	display: inline;
+	text-align: center;
+	border: none;
+	padding: 8px 16px;
+	color: var(--textColor);
+	font-size: 16px;
+	border-radius: 4px;
+	font-weight: 300;
+	background-color: var(--buttonColorPrimary);
+	cursor: pointer;
+}
+
+.copy__box {
+	text-align: center;
+    margin-top: 16px;
+}
