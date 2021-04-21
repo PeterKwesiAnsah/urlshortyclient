@@ -11,7 +11,6 @@ type resultsProp = {
 const Results = ({ requestedUrl }: resultsProp): JSX.Element => {
 	const { data, loading, error } = useQuery(requestedUrl);
 
-	console.log(data);
 
 	if (loading) {
 		return <Loading></Loading>;

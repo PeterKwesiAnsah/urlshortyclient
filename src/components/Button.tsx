@@ -1,9 +1,4 @@
-import React, {
-	CSSProperties,
-	Dispatch,
-	ReactElement,
-	ReactPropTypes,
-} from 'react';
+import { CSSProperties } from 'react';
 import '../assets/Button.css';
 
 type buttonProps = {

@@ -2,7 +2,6 @@ import React from 'react';
 import '../assets/Main.css';
 import useInput from '../hooks/useInputUrl';
 import Button from './Button';
-import Fetch from '../hooks/useFetchShortener';
 import Results from '../components/Results';
 
 const Main = () => {

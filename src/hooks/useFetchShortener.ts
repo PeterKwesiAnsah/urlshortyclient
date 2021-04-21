@@ -13,7 +13,6 @@ function useQueryFn(inputUrl: String) {
 	const { data, loading, error } = useQuery(GET_URL, {
 		variables: { url: inputUrl },
 	});
-	console.log('error',error)
 	return { data, loading, error };
 }
 
