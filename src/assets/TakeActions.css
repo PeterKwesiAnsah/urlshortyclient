@@ -13,6 +13,7 @@
 @media only screen and (max-width: 660px) {
 	.url__text {
 		width: 60vw;
+		font-size: 1.10em;
 	}
 }
 
@@ -20,6 +21,7 @@
 	.url__text {
 		width: 85vw;
 		/* min-width: 456px; */
+		font-size: 1.05em;
 	}
 }
 
@@ -27,5 +29,6 @@
 	.url__text {
 		width: 90vw;
 		/* min-width: 456px; */
+		font-size: 1.03em;
 	}
 }
