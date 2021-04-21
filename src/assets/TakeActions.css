@@ -11,16 +11,21 @@
 }
 
 @media only screen and (max-width: 660px) {
-	.takeAction {
+	.url__text {
 		width: 60vw;
-		padding: 2px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.url__text {
+		width: 85vw;
+		/* min-width: 456px; */
 	}
 }
 
 @media only screen and (max-width: 320px) {
-	.takeAction {
-		width: 85vw;
-		padding: 0;
-		min-width: 456px;
+	.url__text {
+		width: 90vw;
+		/* min-width: 456px; */
 	}
 }
