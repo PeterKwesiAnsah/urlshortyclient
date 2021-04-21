@@ -4,6 +4,7 @@
 	--textColor: #fff;
 	--buttonColorMain: #3f51b5;
 	--buttonColorPrimary: #5567ceeb;
+	--errorPrimary: red;
 }
 
 * {
@@ -27,4 +28,7 @@ body {
 	margin: 15vh 0;
 	display: grid;
 	place-items: center;
+}
+a{
+	text-decoration: none;
 }

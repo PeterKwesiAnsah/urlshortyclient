@@ -1,11 +1,10 @@
-import React, { ReactHTMLElement } from 'react';
-
-type errorProps<E extends { message: string }> = {
-	children: HTMLHeadingElement;
-	error: E;
+type errorProps = {
+	error: any;
 };
-const Error = ({}) => {
-	return <div></div>;
+const Error = ({ error }: errorProps) => {
+	console.log(error.message);
+	// const {message}=
+	return <h3>{error.message}</h3>;
 };
 
 export default Error;
