@@ -9,15 +9,19 @@ type copyProps = {
 
 const Copy = ({ url }: copyProps) => {
 	const [copy, setCopy] = React.useState(false);
+	const childText = React.useMemo(() => (copy ? 'Copied' : 'Copy'), [copy]);
+	React.useEffect(() => {
+		setCopy(false);
+	}, [url]);
 	return (
 		<>
 			<div className="copy__box">
 				<CopyToClipboard text={url} onCopy={() => setCopy(true)}>
-					<span className="copy__button">Copy</span>
+					<span className="copy__button">{childText}</span>
 				</CopyToClipboard>
 			</div>
 		</>
 	);
 };
 
-export default Copy;
+export default React.memo(Copy);

@@ -1,11 +1,31 @@
 .input {
 	height: 24px;
-	width: 45vw;
+	width: 50vw;
 	padding: 15px;
 	font-family: inherit;
 
 	font-size: 16px;
 	border-radius: 2px;
-    border: none;
-    margin-top: 8px;
+	border: none;
+	margin-top: 8px;
+	
+}
+@media only screen and (max-width: 660px) {
+	.input {
+		width: 60vw;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.input {
+		width: 85vw;
+		/* min-width: 456px; */
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.input {
+		width: 90vw;
+		/* min-width: 456px; */
+	}
 }

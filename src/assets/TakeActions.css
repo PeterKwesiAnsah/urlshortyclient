@@ -4,7 +4,23 @@
 	padding: 4px;
 	font-weight: 100;
 	border-radius: 4px;
+	overflow: hidden;
 }
-.takeAction{
-    margin-top: 16px;
+.takeAction {
+	margin-top: 16px;
+}
+
+@media only screen and (max-width: 660px) {
+	.takeAction {
+		width: 60vw;
+		padding: 2px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.takeAction {
+		width: 85vw;
+		padding: 0;
+		min-width: 456px;
+	}
 }

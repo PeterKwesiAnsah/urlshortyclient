@@ -1,3 +1,14 @@
-.header{
-    font-size: 48px;
+.header {
+	font-size: 48px;
+}
+
+@media only screen and (max-width: 660px) {
+	.header {
+		font-size: 36px;
+	}
+}
+@media only screen and (max-width: 330px) {
+	.header {
+		font-size: 30px;
+	}
 }
